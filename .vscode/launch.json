@@ -10,8 +10,7 @@
             "request": "launch",
             "mode": "debug",
             "program": "${file}",
-            "args": ["-pin", "Fah7Bf9", "-xml", "test.xml"]
+            "args": ["-pin", ""]
         }
-
     ]
 }
