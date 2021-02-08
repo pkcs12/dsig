@@ -1,0 +1,43 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <RegisterInvoiceRequest xmlns="https://efi.tax.gov.me/fs/schema" Id="Request" Version="1">
+            <Header UUID="c89fbc4f-1d84-4a45-95ba-452df3445125" SendDateTime="2020-11-19T01:44:18+01:00"/>
+            <Invoice TypeOfInv="NONCASH" IsSimplifiedInv="false" IssueDateTime="2020-11-19T01:44:18+01:00" InvNum="db891qz567/20/2020" InvOrdNum="20" IsIssuerInVAT="true" TotPriceWoVAT="309.55" TotVATAmt="65.01" TotPrice="374.56" OperatorCode="xg149gu972" BusinUnitCode="db891qz567" SoftCode="ge788jm169" IIC="877dd5a09e7a6a0100f058116bebb8c7" IICSignature="8a088d49d080a392400aa9a7039852ef1ba175ecdcc4a4837f9ab2ce02cb61708082ed28d20e722f05a37bd082ef877f269394c705bfbf2f0012c55df4cec10991812155a70762e0481a3295f57e66ccff50b433fd0f553953ecc7e4ec482345de183418a24d0888d64e28247ef5cc1f7129eaf71d4db9b1dabdab5d3f1aef94df18d9ed95d296716577aae116214885f4f0b4b3ee3988f5e6230366d54cfb2d943158115aa64fc83f6eda07e0d7981cb2a58b26068efa714d03d1ca4f46b11ac585a2e44f5febf941c85e310a8fa9f2d7b0882486a4c00b80844288a0895523e477c0dcab73fcef42df5dadb3c136a3a8706d1f3285fb257ee7ee677e0a4759" IsReverseCharge="false">
+                <SupplyDateOrPeriod Start="2020-11-19" End="2020-11-19"/>
+                <PayMethods>
+                    <PayMethod Type="ACCOUNT" Amt="374.56"/>
+                </PayMethods>
+                <Seller IDType="TIN" IDNum="03036286" Name="NOSHTO D.O.O." Address="Cetinjski put bb" Town="Podgorica" Country="MNE"/>
+                <Buyer IDType="TIN" IDNum="03036286" Name="NOSHTO d.o.o."/>
+                <Items>
+                    <I N="Advance payment for doing something" U="unit" Q="1.00" UPB="130.15" UPA="157.48" RR="true" PB="130.15" VR="21.00" VA="27.33" PA="157.48"/>
+                    <I N="Advance payment for doing something else" U="unit" Q="1.00" UPB="179.40" UPA="217.07" RR="true" PB="179.40" VR="21.00" VA="37.67" PA="217.07"/>
+                </Items>
+                <SameTaxes>
+                    <SameTax NumOfItems="2" PriceBefVAT="309.55" VATRate="21.00" VATAmt="65.01"/>
+                </SameTaxes>
+            </Invoice>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+                    <Reference URI="#Request">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                        <DigestValue>y86wccqVakns653KAFtqDjBDxKUBZBitdRIr1Lau5I4=</DigestValue>
+                    </Reference>
+                </SignedInfo>
+                <SignatureValue>gdQCk5uwCpYREk2rUSeN+FM7foW+9vTp0WZhSw9rXwJBLPmWm4MXYggPNlLVLkBpri7ox/CQE85rGbUm6Tx+FZJ4tXXvmdq8dUiQtGPmzvM9qWQnxxQyDiq+Az3+A7B2Fzs4JCanGj6/9Ob5qCxTYiVtdKP/KT1Z3EDvJERJScFTcs/kmvZsSXRnM05tyb3XLWptPoTerm54edr/ZZ7HSjJSfwdDucACPLpX9UZpGdIjfJ5mRPGqzCmROWNnY4zX2tCPJ07HvPJtWHqzpDAlM26B5nQBUkothiAbxgPAAp5jreu4MoxsNCIruGJmgq9CguagvcBwzzvwQ4TJdL6hUA==</SignatureValue>
+                <KeyInfo>
+                    <X509Data>
+                        <X509Certificate>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</X509Certificate>
+                        <X509SubjectName>SERIALNUMBER=41225,CN=Valerii Lider,OU=Pravno lice,O=Noshto doo,C=ME,2.5.4.42=#130756616c65726969,2.5.4.4=#13054c69646572,2.5.4.97=#130e5641544d452d3033303336323836</X509SubjectName>
+                    </X509Data>
+                </KeyInfo>
+            </Signature>
+        </RegisterInvoiceRequest>
+    </s:Body>
+</s:Envelope>
