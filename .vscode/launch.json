@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "debug",
             "program": "${file}",
-            "args": ["-pin", ""]
+            "args": ["-pin", "Fah7Bf9", "-xml", "./002-20 Hoshto.xml"]
         }
     ]
 }
