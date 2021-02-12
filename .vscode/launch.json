@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "debug",
             "program": "${file}",
-            "args": ["-pin", "Fah7Bf9", "-xml", "./002-20 Hoshto.xml"]
+            "args": ["-busin", "db891qz567", "-in", "./001.pdf.xml", "-out", "./001.pdf.signed.xml", "-pin", "Fah7Bf9", "-soft", "ge788jm169"]
         }
     ]
 }
