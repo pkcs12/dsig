@@ -21,5 +21,8 @@ func Envelope(req *etree.Document) (*etree.Document, error) {
 	}
 	body.AddChild(req.Child[0])
 
+	doc.IndentTabs()
+	doc.Root().SetTail("")
+
 	return doc, nil
 }
