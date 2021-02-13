@@ -62,6 +62,11 @@ func main() {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
 	}
+
+	signedXML.IndentTabs()
+	// removes extra \n at the ned of the docuemnt
+	signedXML.Root().SetTail("")
+
 	if err = signedXML.WriteToFile(*outFile); err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
